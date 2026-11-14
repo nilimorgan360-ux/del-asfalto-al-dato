@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarjeta QR · La Ruta del Triciclo</title>
+  <meta name="description" content="Escanea el código QR y juega La Ruta del Triciclo: la historia del mercado de triciclos eléctricos de La Habana convertida en juego.">
+  <meta name="theme-color" content="#081a30">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sitio.css">
+</head>
+<body class="pagina-qr" data-pagina="/qr-card">
+  <main class="tarjeta-qr">
+    <div class="marca">
+      <img src="/assets/logo.svg" alt="">
+      <span>Del asfalto al dato<small>La Ruta del Triciclo</small></span>
+    </div>
+    <span class="kicker" style="justify-content:center">Campaña de divulgación · Ciencia de Datos</span>
+    <h1>Escanea.<br><em>Juega.</em><br>Descubre.</h1>
+    <img class="qr-imagen" src="/qr.svg" alt="Código QR del juego La Ruta del Triciclo">
+    <p>Cinco actos, cinco decisiones y una historia real sobre el mercado de triciclos eléctricos de La Habana. Apunta la cámara de tu móvil al código y empieza la ruta.</p>
+    <div class="pasos-qr">
+      <div class="paso-qr"><b>01</b>Abre la cámara o una app de QR.</div>
+      <div class="paso-qr"><b>02</b>Escanea el código de arriba.</div>
+      <div class="paso-qr"><b>03</b>Juega, aprende y deja tu reacción.</div>
+    </div>
+    <code class="enlace-qr" data-enlace-juego>/juego</code>
+    <div class="qr-acciones no-imprimir">
+      <a class="btn btn-primario btn-pequeno" href="/juego" data-evento="clic_jugar_qr">Abrir el juego →</a>
+      <button class="btn btn-claro btn-pequeno" type="button" id="copiar-qr">Copiar enlace</button>
+      <button class="btn btn-claro btn-pequeno" type="button" id="imprimir-qr">Imprimir tarjeta</button>
+      <a class="btn btn-claro btn-pequeno" href="/">Volver al inicio</a>
+    </div>
+    <p class="login-pie" style="text-align:center">Laura Díaz Sánchez · Ciencia de Datos · Facultad de Matemática y Computación · Universidad de La Habana</p>
+  </main>
+
+  <script src="/js/analitica.js"></script>
+  <script src="/js/qr.js"></script>
+</body>
+</html>

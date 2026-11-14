@@ -1,0 +1,18 @@
+{
+  "sitio": {
+    "titulo": "Del asfalto al dato",
+    "subtitulo": "La Ruta del Triciclo",
+    "autora": "Laura Díaz Sánchez",
+    "institucion": "Ciencia de Datos · Facultad de Matemática y Computación · Universidad de La Habana",
+    "url_publica": "",
+    "puerto": 8000
+  },
+  "propietaria": {
+    "nombre": "Laura Díaz Sánchez",
+    "emails": [],
+    "setup_token": ""
+  },
+  "analitica": {
+    "sal": "cambia-esta-sal"
+  }
+}

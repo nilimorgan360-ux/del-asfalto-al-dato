@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Del asfalto al dato · La Ruta del Triciclo</title>
+  <meta name="description" content="Una historia interactiva de ciencia de datos creada por Laura Díaz Sánchez. Juega la ruta, descubre los hallazgos y deja tu reacción.">
+  <meta name="theme-color" content="#081a30">
+  <meta property="og:title" content="Del asfalto al dato · La Ruta del Triciclo">
+  <meta property="og:description" content="20 historias, 8 municipios y una pregunta: ¿cuánto cuesta moverse en La Habana? Juega la historia.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sitio.css">
+</head>
+<body data-pagina="/">
+  <header class="nav">
+    <div class="contenedor nav-interior">
+      <a class="marca" href="/">
+        <img src="/assets/logo.svg" alt="">
+        <span>Del asfalto al dato<small>La Ruta del Triciclo</small></span>
+      </a>
+      <nav class="nav-enlaces" aria-label="Navegación principal">
+        <a href="#historia">La historia</a>
+        <a href="#datos">Los datos</a>
+        <a href="#reacciones">Reacciones</a>
+        <a href="/qr-card">QR</a>
+        <a href="/panel">Panel</a>
+      </nav>
+      <a class="btn btn-primario btn-pequeno nav-cta" href="/juego" data-evento="clic_jugar_nav">Jugar la ruta →</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="contenedor hero-grid">
+        <div class="hero-copiar">
+          <span class="kicker">Proyecto de Ciencia de Datos · La Habana · 2026</span>
+          <h1>Del asfalto<em>al dato</em></h1>
+          <p class="hero-lead">Un mercado que mueve la ciudad y que casi nadie se había detenido a medir. Esta es su historia, contada como un recorrido en cinco actos. Y sí: puedes jugarla.</p>
+          <div class="hero-acciones">
+            <a class="btn btn-primario" href="/juego" data-evento="clic_jugar_hero">Jugar la historia <span aria-hidden="true">→</span></a>
+            <a class="btn btn-fantasma" href="#historia">Leer el recorrido</a>
+          </div>
+          <div class="hero-meta">
+            <span>Creado por <strong>Laura Díaz Sánchez</strong></span>
+            <span aria-hidden="true">·</span>
+            <span>Facultad de Matemática y Computación · UH</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <span class="hero-anillo a1" aria-hidden="true"></span>
+          <span class="hero-anillo a2" aria-hidden="true"></span>
+          <img class="hero-triciclo" src="/assets/triciclo.svg" alt="Ilustración de un triciclo eléctrico de carga">
+          <div class="hero-sello" aria-hidden="true">20<strong>historias</strong>una ciudad</div>
+          <a class="qr-mini" href="/qr-card" aria-label="Ver el código QR para jugar">
+            <img src="/qr.svg" alt="Código QR que lleva al juego La Ruta del Triciclo">
+            <span>Escanea y juega</span>
+            <code data-enlace-juego>/juego</code>
+          </a>
+        </div>
+      </div>
+      <div class="cifras">
+        <div class="contenedor cifras-grid">
+          <div class="cifra"><b>20</b><span>historias registradas</span></div>
+          <div class="cifra"><b>8</b><span>municipios</span></div>
+          <div class="cifra"><b>2</b><span>fuentes de datos</span></div>
+          <div class="cifra"><b>5</b><span>actos para jugar</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion prologo" id="historia">
+      <div class="contenedor prologo-grid">
+        <div class="prologo-texto revelar">
+          <span class="kicker">Prólogo</span>
+          <h2>Todo empezó con una pregunta.</h2>
+          <p>En una calle de La Habana, un triciclo eléctrico pasó cargado hasta el techo. Luego otro. Y otro. Nadie tenía los números: ni cuántos eran, ni cuánto costaban, ni quién los usaba.</p>
+          <p class="destacado">Así que hice lo único que sabe hacer una científica de datos: empezar a preguntar.</p>
+          <p>Veinte historias después —doce anuncios web y ocho entrevistas— el mercado dejó de ser una escena suelta y se convirtió en evidencia. Esta web es el recorrido: la historia, los hallazgos y un juego para mirar la ciudad con otros ojos.</p>
+        </div>
+        <aside class="cita revelar retraso-2">
+          <blockquote>Si no está en los datos, todavía no existe.</blockquote>
+          <cite>Cuaderno de campo · Laura Díaz Sánchez</cite>
+          <span class="cita-linea" aria-hidden="true"></span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seccion ruta" id="ruta">
+      <div class="contenedor">
+        <div class="seccion-cabeza revelar">
+          <span class="kicker">El recorrido</span>
+          <h2>Una ruta en cinco actos</h2>
+          <p>Observar, preguntar, recoger, limpiar y contar. Cada estación dejó una capa de la historia. En el juego, cada acto es una decisión que puedes tomar con los datos en la mano.</p>
+        </div>
+        <div class="actos">
+          <a class="acto-tarjeta revelar" href="/juego?acto=1" data-evento="clic_acto" data-acto="1">
+            <span class="acto-numero">01 · La chispa</span>
+            <h3>Observar antes de medir</h3>
+            <p>El mercado estaba a la vista. La pregunta era cómo mirarlo: con evidencia, no con intuición.</p>
+            <span class="acto-flecha" aria-hidden="true">→</span>
+          </a>
+          <a class="acto-tarjeta revelar retraso-1" href="/juego?acto=2" data-evento="clic_acto" data-acto="2">
+            <span class="acto-numero">02 · El terreno</span>
+            <h3>Salir a la calle y escuchar</h3>
+            <p>Doce anuncios y ocho conversaciones. El dato dejó de ser una fila y se volvió una persona contando su negocio.</p>
+            <span class="acto-flecha" aria-hidden="true">→</span>
+          </a>
+          <a class="acto-tarjeta revelar retraso-2" href="/juego?acto=3" data-evento="clic_acto" data-acto="3">
+            <span class="acto-numero">03 · Los números</span>
+            <h3>Cuando el mercado habla</h3>
+            <p>Precio, geografía, marca y uso. Cuatro lentes para mirar el mismo fenómeno desde ángulos distintos.</p>
+            <span class="acto-flecha" aria-hidden="true">→</span>
+          </a>
+          <a class="acto-tarjeta revelar retraso-3" href="/juego?acto=4" data-evento="clic_acto" data-acto="4">
+            <span class="acto-numero">04 · Las grietas</span>
+            <h3>El bache que no se ve</h3>
+            <p>Ocho entrevistas, ocho obstáculos distintos. La barrera más cara es la que no aparece en la hoja de cálculo.</p>
+            <span class="acto-flecha" aria-hidden="true">→</span>
+          </a>
+          <a class="acto-tarjeta revelar retraso-4" href="/juego?acto=5" data-evento="clic_acto" data-acto="5">
+            <span class="acto-numero">05 · La luz</span>
+            <h3>Una ventaja sostenible</h3>
+            <p>Solo uno de cada doce anuncios incluye panel solar. La autonomía puede ser el próximo diferencial.</p>
+            <span class="acto-flecha" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion numeros" id="datos">
+      <div class="contenedor">
+        <div class="seccion-cabeza revelar">
+          <span class="kicker">Acto III · Los números</span>
+          <h2>Lo que el mercado dijo cuando lo medimos</h2>
+          <p>Los gráficos no son adornos: son la forma de hacer visible lo que estaba disperso. Pasa el cursor, compara y saca tus propias conclusiones.</p>
+        </div>
+
+        <div class="kpis revelar">
+          <div class="kpi"><b>$3,941</b><span>precio promedio</span><small>20 registros · USD</small></div>
+          <div class="kpi"><b>$3,000–5,200</b><span>rango completo</span><small>La banda más común: 3,500–4,000</small></div>
+          <div class="kpi"><b>75%</b><span>se compra para carga</span><small>15 de 20 registros</small></div>
+          <div class="kpi"><b>25%</b><span>se concentra en 10 de Octubre</span><small>5 de 20 registros</small></div>
+        </div>
+
+        <div class="graficos-grid">
+          <div class="panel-claro revelar">
+            <h3>El precio de moverse</h3>
+            <p class="nota">Distribución de los 20 registros por banda de precio (USD).</p>
+            <div class="grafico-barras" id="grafico-precios" role="img" aria-label="Gráfico de barras: 4 registros entre 3.000 y 3.500; 7 entre 3.500 y 4.000; 4 entre 4.000 y 4.500; 3 entre 4.500 y 5.000; 2 entre 5.000 y 5.200."></div>
+          </div>
+          <div class="panel-claro revelar retraso-1">
+            <h3>Carga o pasajeros</h3>
+            <p class="nota">El ADN del negocio: el triciclo es una herramienta de ingresos.</p>
+            <div class="dona-caja">
+              <div class="dona" data-dona="75" role="img" aria-label="75 por ciento carga, 25 por ciento pasajeros"><b>75%</b></div>
+              <div class="dona-leyenda">
+                <span><i class="punto"></i> Carga · 15 registros</span>
+                <span><i class="punto ambar"></i> Pasajeros · 5 registros</span>
+                <span style="margin-top:.4rem;color:var(--tinta);font-weight:700">No es un juguete: es una herramienta de trabajo.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="graficos-grid" style="margin-top:1.1rem">
+          <div class="panel-claro revelar">
+            <h3>El mapa del mercado</h3>
+            <p class="nota">Registros por municipio. La geografía no es neutral.</p>
+            <div class="grafico-horizontal" id="grafico-municipios" role="img" aria-label="10 de Octubre 5 registros, Centro Habana 3, y seis municipios con 2 registros cada uno."></div>
+          </div>
+          <div class="panel-claro revelar retraso-1">
+            <h3>El precio también tiene barrio</h3>
+            <p class="nota">Promedio por municipio, en dólares. Brecha entre extremos: 1,160 USD.</p>
+            <div class="grafico-horizontal" id="grafico-precio-municipio" role="img" aria-label="Precio promedio por municipio: Habana del Este 4600, Plaza 4500, Playa 4300, Cerro y Cotorro 4000, Centro Habana 3941, La Lisa 3500, 10 de Octubre 3440."></div>
+          </div>
+        </div>
+
+        <div class="graficos-grid" style="margin-top:1.1rem">
+          <div class="panel-claro revelar">
+            <h3>Las marcas que mueven la ciudad</h3>
+            <p class="nota">Frecuencia en los 12 anuncios web. KVITOVA y JINPENG concentran el 58%.</p>
+            <div class="grafico-horizontal" id="grafico-marcas" role="img" aria-label="KVITOVA 4, JINPENG 3, JINPENG PANTHER 2, IZUKI 2, CAIMAN 53 1."></div>
+          </div>
+          <div class="panel-claro revelar retraso-1">
+            <h3>Los gráficos originales</h3>
+            <p class="nota">Los gráficos que construí con los datos del proyecto.</p>
+            <div class="galeria">
+              <figure><img src="/assets/grafico_precios.png" alt="Distribución de precios"><figcaption>Precios</figcaption></figure>
+              <figure><img src="/assets/grafico_municipios.png" alt="Distribución por municipio"><figcaption>Municipios</figcaption></figure>
+              <figure><img src="/assets/grafico_uso.png" alt="Categoría de uso"><figcaption>Uso</figcaption></figure>
+              <figure><img src="/assets/grafico_marcas.png" alt="Distribución por marca"><figcaption>Marcas</figcaption></figure>
+              <figure><img src="/assets/grafico_barreras.png" alt="Barreras del mercado"><figcaption>Barreras</figcaption></figure>
+              <figure><img src="/assets/grafico_precios_municipio.png" alt="Precios por municipio"><figcaption>Precio por barrio</figcaption></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion grietas">
+      <div class="contenedor grietas-grid">
+        <div class="revelar">
+          <span class="kicker">Acto IV · Las grietas</span>
+          <h2>El verdadero bache<em>no está en la calle.</em></h2>
+          <p>En las ocho entrevistas aparecieron ocho obstáculos distintos. Ninguno se repite en la hoja de cálculo; todos se repiten en la vida real.</p>
+          <p class="grietas-cita">La barrera más cara es la que no se ve: la falta de información.</p>
+        </div>
+        <div class="chips revelar retraso-2">
+          <div class="chip">Falta de documentos</div>
+          <div class="chip">Precios altos</div>
+          <div class="chip">Horarios limitados</div>
+          <div class="chip">Trámites lentos</div>
+          <div class="chip">Falta de infraestructura</div>
+          <div class="chip">Burocracia</div>
+          <div class="chip">Falta de mantenimiento</div>
+          <div class="chip">Requisitos estrictos</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion luz">
+      <div class="contenedor luz-grid">
+        <div class="revelar">
+          <span class="kicker">Acto V · La luz</span>
+          <h2>Una luz al final<em>del camino.</em></h2>
+          <div class="luz-dato"><b>1 de 12</b><span>anuncios web incluye panel solar</span></div>
+          <p>La sostenibilidad no es un adorno: puede ser la ventaja que diferencie a un operador en un mercado donde la autonomía y el costo por kilómetro lo son todo.</p>
+        </div>
+        <div class="revelar retraso-1">
+          <div class="mosaico" role="img" aria-label="Doce anuncios web: solo uno incluye panel solar.">
+            <span class="celda activa"></span>
+            <span class="celda"></span><span class="celda"></span><span class="celda"></span><span class="celda"></span><span class="celda"></span>
+            <span class="celda"></span><span class="celda"></span><span class="celda"></span><span class="celda"></span><span class="celda"></span><span class="celda"></span>
+          </div>
+          <p class="mosaico-pie">Cada cuadro es un anuncio de la muestra web. El ámbar es el único con panel solar: 8.3% del total.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion aprendizajes">
+      <div class="contenedor">
+        <div class="seccion-cabeza revelar">
+          <span class="kicker">Lo que aprendí</span>
+          <h2>Cinco lecciones que no estaban en el dataset</h2>
+          <p>No están en las filas: están en el proceso. Y son la parte de la historia que me llevo a casa.</p>
+        </div>
+        <div class="lecciones">
+          <div class="leccion revelar"><b>01</b><div><h3>Los datos también viven en la calle.</h3><p>La web muestra precios; las personas muestran el mercado.</p></div></div>
+          <div class="leccion revelar retraso-1"><b>02</b><div><h3>Una conversación vale más que cien filas.</h3><p>Las ocho entrevistas explicaron lo que ningún portal decía.</p></div></div>
+          <div class="leccion revelar retraso-2"><b>03</b><div><h3>El precio cuenta una historia.</h3><p>No se paga por un vehículo: se paga por la posibilidad de trabajar.</p></div></div>
+          <div class="leccion revelar retraso-3"><b>04</b><div><h3>La informalidad deja huella.</h3><p>La falta de documentos y la burocracia son parte del costo real.</p></div></div>
+          <div class="leccion revelar retraso-4"><b>05</b><div><h3>Medir es una forma de cuidar.</h3><p>Poner números a un mercado invisible es el primer paso para mejorarlo.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion reacciones" id="reacciones">
+      <div class="contenedor">
+        <div class="seccion-cabeza revelar">
+          <span class="kicker">El muro de la ruta</span>
+          <h2>¿Te gustó la historia?</h2>
+          <p>Tu reacción es anónima y forma parte de la medición de alcance de esta campaña de divulgación. Si quieres, deja también una frase: el próximo visitante la verá.</p>
+        </div>
+        <div class="reacciones-grid">
+          <div class="caja-reaccion revelar">
+            <h3>Déjame tu reacción</h3>
+            <p>Un clic me dice si la historia funcionó. El comentario me dice por qué.</p>
+            <div class="reaccion-botones">
+              <button class="btn-reaccion" type="button" data-reaccion="me_gusta">
+                <span class="icono" aria-hidden="true">♥</span> Me gusta
+                <b id="conteo-like">0</b>
+              </button>
+              <button class="btn-reaccion no" type="button" data-reaccion="no_me_gusta">
+                <span class="icono" aria-hidden="true">♡</span> No me gusta
+                <b id="conteo-dislike">0</b>
+              </button>
+            </div>
+            <div class="reaccion-campos">
+              <div class="campo">
+                <label for="reaccion-nombre">Tu nombre (opcional)</label>
+                <input id="reaccion-nombre" maxlength="40" placeholder="Visitante">
+              </div>
+              <div class="campo">
+                <label for="reaccion-comentario">¿Qué te llevas? (opcional)</label>
+                <textarea id="reaccion-comentario" maxlength="280" placeholder="Una frase, una duda, una idea…"></textarea>
+              </div>
+              <button class="btn btn-teal btn-bloque" type="button" id="reaccion-enviar">Enviar mi reacción</button>
+              <p id="reaccion-estado" role="status"></p>
+            </div>
+          </div>
+          <div class="revelar retraso-2">
+            <div class="muro" id="muro" aria-live="polite">
+              <div class="muro-vacio">Cargando reacciones…</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion cta-final">
+      <div class="contenedor cta-grid">
+        <div class="revelar">
+          <span class="kicker">Ahora te toca</span>
+          <h2>La historia sigue<em>en tus manos.</em></h2>
+          <p>Cinco actos, cinco decisiones y un resultado: descubrir si piensas como una científica de datos. Escanea el QR o abre el juego y recorre el mercado de triciclos desde dentro.</p>
+          <div class="cta-acciones">
+            <a class="btn btn-primario" href="/juego" data-evento="clic_jugar_final">Jugar La Ruta del Triciclo →</a>
+            <button class="btn btn-fantasma" type="button" data-copiar="juego" data-texto="¡Enlace copiado!">Copiar enlace</button>
+          </div>
+        </div>
+        <div class="qr-grande revelar retraso-1">
+          <img src="/qr.svg" alt="Código QR para abrir el juego La Ruta del Triciclo">
+          <h3>Escanea y juega</h3>
+          <p>Comparte este QR o el enlace. Cada escaneo se mide para conocer el alcance.</p>
+          <code data-enlace-juego>/juego</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion numeros vivo" id="alcance">
+      <div class="contenedor">
+        <div class="seccion-cabeza revelar">
+          <span class="kicker">Alcance del sitio</span>
+          <h2>El sitio en vivo</h2>
+          <p>Contadores anónimos de visitas, personas y partidas. El detalle completo, las fuentes y las reacciones están en el panel privado de la autora.</p>
+        </div>
+        <div class="cifras-grid" id="vivo-cifras">
+          <div class="cifra"><b id="vivo-visitas">—</b><span>visualizaciones</span></div>
+          <div class="cifra"><b id="vivo-personas">—</b><span>personas únicas</span></div>
+          <div class="cifra"><b id="vivo-qr">—</b><span>escaneos de QR</span></div>
+          <div class="cifra"><b id="vivo-partidas">—</b><span>partidas terminadas</span></div>
+          <div class="cifra"><b id="vivo-me-gusta">—</b><span>me gusta</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-grid">
+        <div>
+          <h3>Del asfalto al dato</h3>
+          <p>Creado por Laura Díaz Sánchez, estudiante de Ciencia de Datos en la Facultad de Matemática y Computación.</p>
+        </div>
+        <div>
+          <h4>Explorar</h4>
+          <a href="/juego">Jugar la ruta</a>
+          <a href="/qr-card">Tarjeta con QR</a>
+          <a href="#datos">Los datos</a>
+          <a href="#reacciones">Muro de reacciones</a>
+        </div>
+        <div>
+          <h4>Sobre el proyecto</h4>
+          <a href="#historia">La historia</a>
+          <a href="#datos">Metodología y datos</a>
+          <a href="#reacciones">Lo que opina la gente</a>
+        </div>
+      </div>
+      <div class="pie-final">
+        <span>© 2026 Laura Díaz Sánchez · Proyecto académico de Ciencia de Datos</span>
+        <span>Muestra limitada: 20 registros. Los datos son una aproximación, no un censo.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/analitica.js"></script>
+  <script src="/js/historia.js"></script>
+</body>
+</html>

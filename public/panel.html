@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de la autora · Del asfalto al dato</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#081a30">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sitio.css">
+  <link rel="stylesheet" href="/css/panel.css">
+</head>
+<body class="panel-page" data-pagina="/panel">
+  <div class="panel-login" id="login">
+    <div class="login-caja">
+      <div class="login-marca">
+        <img src="/assets/logo.svg" alt="">
+        <span>Del asfalto al dato<small>Panel de la autora</small></span>
+      </div>
+      <h1 class="login-titulo" id="login-titulo">Entra sin contraseña</h1>
+      <p class="login-sub" id="login-sub">Solo los correos de la propietaria pueden abrir este panel. Sin contraseña: escribes tu correo y entras.</p>
+
+      <form class="login-form" id="form-login">
+        <div id="campos-login">
+          <label for="email">Correo de propietaria</label>
+          <input id="email" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com">
+        </div>
+
+        <div id="campos-setup" class="oculto">
+          <p class="login-pistas" style="margin-top:0">Primera vez: configura los dos correos que podrán entrar. Solo se guardan en tu servidor. Hazlo antes de publicar el sitio para que nadie más pueda reclamar el panel.</p>
+          <label for="email1">Correo 1</label>
+          <input id="email1" type="email" autocomplete="email" placeholder="correo1@ejemplo.com">
+          <label for="email2" style="margin-top:.6rem">Correo 2</label>
+          <input id="email2" type="email" autocomplete="email" placeholder="correo2@ejemplo.com">
+          <label for="nombre-setup" style="margin-top:.6rem">Tu nombre</label>
+          <input id="nombre-setup" type="text" maxlength="80" value="Laura Díaz Sánchez">
+          <label for="codigo-setup" style="margin-top:.6rem">Código de configuración</label>
+          <input id="codigo-setup" type="text" autocomplete="off" maxlength="20" placeholder="Ej. A1B2C3">
+          <p class="login-pistas" style="margin-top:.3rem">Está en la terminal del servidor o en <code>datos/setup_token.txt</code>.</p>
+        </div>
+
+        <button class="btn btn-primario btn-bloque" type="submit" id="boton-login">Entrar sin contraseña</button>
+      </form>
+
+      <div id="login-error" class="login-error oculto" role="alert"></div>
+      <p class="login-pistas" id="login-pistas"></p>
+      <p class="login-pie">Acceso pensado para una sola persona: la lista de correos autorizados funciona como llave. Si publicas el sitio, no compartas estos correos. Puedes cambiarlos luego desde Ajustes.</p>
+      <a class="volver" href="/" style="display:inline-block;margin-top:1rem">← Volver al sitio</a>
+    </div>
+  </div>
+
+  <div class="panel-app oculto" id="app">
+    <header class="panel-top">
+      <div class="contenedor panel-top-interior">
+        <a class="marca" href="/">
+          <img src="/assets/logo.svg" alt="">
+          <span>Del asfalto al dato<small>Panel de la autora</small></span>
+        </a>
+        <div class="panel-top-acciones">
+          <span class="badge-live">Datos en vivo</span>
+          <a class="btn btn-fantasma btn-pequeno" href="/" target="_blank" rel="noopener">Ver sitio</a>
+          <a class="btn btn-fantasma btn-pequeno" href="/qr-card" target="_blank" rel="noopener">Ver QR</a>
+          <button class="btn btn-fantasma btn-pequeno" type="button" id="salir">Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="panel-cuerpo">
+      <section class="perfil">
+        <div class="perfil-avatar" id="perfil-avatar">LDS</div>
+        <div class="perfil-info">
+          <span class="rol">Propietaria del sitio · Campaña de divulgación</span>
+          <h1 id="perfil-nombre">Laura Díaz Sánchez</h1>
+          <p id="perfil-institucion">Ciencia de Datos · Facultad de Matemática y Computación · Universidad de La Habana</p>
+          <div class="perfil-stats">
+            <div><b id="perfil-personas">0</b><span>personas únicas</span></div>
+            <div><b id="perfil-visitas">0</b><span>visitas</span></div>
+            <div><b id="perfil-reacciones">0</b><span>reacciones</span></div>
+            <div><b id="perfil-nota">0</b><span>nota media</span></div>
+          </div>
+        </div>
+        <div class="perfil-acciones">
+          <a class="btn btn-teal btn-pequeno" href="/api/exportar.csv" download>Exportar CSV</a>
+          <button class="btn btn-claro btn-pequeno" type="button" id="actualizar">Actualizar</button>
+          <a class="btn btn-claro btn-pequeno" href="/juego" target="_blank" rel="noopener">Abrir juego</a>
+        </div>
+      </section>
+
+      <section class="panel-kpis" id="kpis">
+        <div class="panel-kpi"><b>—</b><span>cargando</span></div>
+      </section>
+
+      <div class="panel-grid">
+        <article class="panel-card">
+          <div class="panel-card-head">
+            <h2>Alcance de los últimos 30 días</h2>
+            <span>Visitas y personas únicas por día</span>
+          </div>
+          <div class="linea-contenedor" id="grafico-linea"></div>
+          <div class="leyenda">
+            <span><i></i> Visitas</span>
+            <span><i class="ambar"></i> Personas únicas</span>
+          </div>
+        </article>
+        <article class="panel-card">
+          <div class="panel-card-head">
+            <h2>¿Les gustó la ruta?</h2>
+            <span>Reacciones de los visitantes</span>
+          </div>
+          <div class="dona-panel" id="dona-panel"><b id="dona-pct">0%</b></div>
+          <div class="dona-texto" id="dona-texto">Sin reacciones todavía</div>
+          <div class="mini-stats">
+            <div><b id="num-like">0</b><span>me gusta</span></div>
+            <div><b id="num-dislike">0</b><span>no me gusta</span></div>
+            <div><b id="num-comentarios">0</b><span>comentarios</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="panel-grid">
+        <article class="panel-card">
+          <div class="panel-card-head">
+            <h2>Actividad por hora</h2>
+            <span>Cuándo entra la gente</span>
+          </div>
+          <div class="barras-hora" id="barras-hora"></div>
+          <div class="eje-hora"><span>00 h</span><span>06 h</span><span>12 h</span><span>18 h</span><span>23 h</span></div>
+        </article>
+        <article class="panel-card">
+          <div class="panel-card-head">
+            <h2>Fuentes de tráfico</h2>
+            <span>De dónde llegan</span>
+          </div>
+          <div class="fuentes-lista" id="fuentes"></div>
+        </article>
+      </div>
+
+      <div class="panel-grid">
+        <article class="panel-card">
+          <div class="panel-card-head">
+            <h2>Embudo del juego</h2>
+            <span>Dónde se quedan y dónde terminan</span>
+          </div>
+          <div class="embudo-lista" id="embudo"></div>
+        </article>
+        <article class="panel-card">
+          <div class="panel-card-head">
+            <h2>Dispositivos y páginas</h2>
+            <span>Cómo consumen la historia</span>
+          </div>
+          <div class="fuentes-lista" id="dispositivos"></div>
+          <div class="panel-card-head" style="margin-top:1.2rem">
+            <h2>Páginas más vistas</h2>
+          </div>
+          <div class="fuentes-lista" id="paginas"></div>
+        </article>
+      </div>
+
+      <div class="panel-grid">
+        <article class="panel-card">
+          <div class="panel-card-head">
+            <h2>Comentarios recientes</h2>
+            <span>Lo que dejó la gente</span>
+          </div>
+          <div class="comentarios-lista" id="comentarios">
+            <div class="sin-datos">Cargando…</div>
+          </div>
+        </article>
+        <article class="panel-card">
+          <div class="panel-card-head">
+            <h2>Ajustes de la propietaria</h2>
+            <span>Solo visible para ti</span>
+          </div>
+          <form class="ajustes-form" id="form-ajustes">
+            <div class="campo">
+              <label for="emails-config">Correos autorizados (uno por línea)</label>
+              <textarea id="emails-config" rows="3" placeholder="correo1@ejemplo.com&#10;correo2@ejemplo.com"></textarea>
+            </div>
+            <div class="campo">
+              <label for="nombre-config">Tu nombre</label>
+              <input id="nombre-config" maxlength="80">
+            </div>
+            <div class="campo">
+              <label for="url-config">URL pública (opcional)</label>
+              <input id="url-config" type="url" placeholder="https://tu-sitio.com">
+            </div>
+            <button class="btn btn-teal btn-bloque" type="submit">Guardar ajustes</button>
+            <p class="ajustes-nota" id="url-actual"></p>
+          </form>
+          <p class="ajustes-nota" style="margin-top:1rem">El QR se genera automáticamente con la URL pública. Si no la configuras, usa la IP de tu red local para que puedas probarlo desde el móvil.</p>
+          <button class="btn btn-claro btn-bloque btn-pequeno" type="button" id="copiar-enlace" style="margin-top:.8rem">Copiar enlace del juego</button>
+          <button class="btn btn-claro btn-bloque btn-pequeno" type="button" id="reiniciar-datos" style="margin-top:.5rem;color:#a53228;border-color:rgba(226,87,76,.35)">Reiniciar estadísticas (borrar datos)</button>
+        </article>
+      </div>
+
+      <p class="ajustes-nota" id="ultima-actualizacion" style="text-align:center;margin-top:1.5rem"></p>
+    </main>
+  </div>
+
+  <div class="panel-toast" id="toast" role="status"></div>
+
+  <script src="/js/panel.js"></script>
+</body>
+</html>

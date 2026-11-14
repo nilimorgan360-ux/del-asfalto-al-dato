@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Ruta del Triciclo · Juego · Del asfalto al dato</title>
+  <meta name="description" content="Juega la historia del mercado de triciclos eléctricos de La Habana: cinco actos, cinco decisiones y una insignia de ciencia de datos.">
+  <meta name="theme-color" content="#081a30">
+  <meta property="og:title" content="La Ruta del Triciclo · Juego">
+  <meta property="og:description" content="Cinco actos, cinco decisiones. ¿Piensas como una científica de datos?">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sitio.css">
+  <link rel="stylesheet" href="/css/juego.css">
+</head>
+<body class="juego-page" data-pagina="/juego">
+  <header class="juego-nav">
+    <div class="contenedor juego-nav-interior">
+      <a class="volver" href="/" data-evento="volver_inicio">← Inicio</a>
+      <a class="marca" href="/">
+        <img src="/assets/logo.svg" alt="">
+        <span>Del asfalto al dato<small>La Ruta del Triciclo</small></span>
+      </a>
+      <div class="progreso-juego">
+        <span id="progreso-texto">Acto <b>1</b> / 5</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="juego-main">
+    <div class="ruta-hud oculto" id="ruta-hud" aria-hidden="true"></div>
+
+    <section class="pantalla" id="pantalla-inicio">
+      <div class="inicio-juego">
+        <div>
+          <span class="kicker">Campaña de divulgación · Ciencia de Datos</span>
+          <h1>La Ruta<br><em>del Triciclo</em></h1>
+          <p>Cinco actos. Cinco decisiones. Una historia real sobre cómo un mercado invisible se convirtió en datos. Al final descubrirás qué tipo de mirada tienes sobre la ciudad.</p>
+          <div class="inicio-datos">
+            <div><b>20</b><span>historias</span></div>
+            <div><b>8</b><span>municipios</span></div>
+            <div><b>5</b><span>actos</span></div>
+            <div><b>~5 min</b><span>de juego</span></div>
+          </div>
+          <div class="inicio-form">
+            <label for="nombre-jugador">Tu nombre (opcional)</label>
+            <input id="nombre-jugador" maxlength="40" placeholder="¿Cómo te llamas?" autocomplete="name">
+            <button class="btn btn-primario btn-bloque" type="button" id="empezar">Empezar la ruta →</button>
+            <p id="nota-acto" class="login-pistas oculto"></p>
+            <p class="login-pistas" id="mejor-marca"></p>
+          </div>
+          <div class="inicio-pie">
+            <span>Sin registro · Apto para móvil · Datos anónimos</span>
+            <a href="/#historia" data-evento="leer_historia">Prefiero leer la historia completa</a>
+          </div>
+        </div>
+        <div class="inicio-visual">
+          <img src="/assets/triciclo.svg" alt="Triciclo eléctrico de carga">
+          <div class="inicio-sello"><b>5</b>actos</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pantalla oculto" id="pantalla-acto"></section>
+    <section class="pantalla oculto" id="pantalla-final"></section>
+  </main>
+
+  <div class="confeti" id="confeti" aria-hidden="true"></div>
+
+  <script src="/js/analitica.js"></script>
+  <script src="/js/juego.js"></script>
+</body>
+</html>
